@@ -27,12 +27,31 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 15),
             Text('Em breve funcionalidades aq kk'),
+            SizedBox(height: 15),
             Container(
               child: RaisedButton(
-                onPressed: () {},
+                color: Theme.of(context).accentColor,
+                onPressed: () {
+                  Get.toNamed('/themes');
+                },
                 child: Text(
                   'Vá mudar os temas',
+                  style: GoogleFonts.inter(
+                      fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            SizedBox(height: 15),
+            Container(
+              child: RaisedButton(
+                color: Theme.of(context).accentColor,
+                onPressed: () {
+                  Get.toNamed('/comunicados');
+                },
+                child: Text(
+                  'Vá ver os comunicados do condosócio',
                   style: GoogleFonts.inter(
                       fontSize: 16, fontWeight: FontWeight.bold),
                 ),
