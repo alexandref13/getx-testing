@@ -7,6 +7,8 @@ class ComunicadosController extends GetxController {
   var isLoading = true.obs;
 
   void getComunicados() {
+    isLoading(true);
+
     ComunicadosRepository.getComunicados().then((response) {
       comunicados.assignAll(response);
       isLoading(false);
